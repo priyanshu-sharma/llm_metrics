@@ -19,7 +19,7 @@ from django.urls import path
 from django.urls import path, include, re_path
 from server_config import health_check_view
 from rest_framework_swagger.views import get_swagger_view
-# from django.conf.urls.static import static
+from evaluation_domain.api.web import urls as evaluation_domain_urls
 
 
 schema_view = get_swagger_view(title='Metrics Server API')
@@ -28,4 +28,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     re_path("^health_check$", health_check_view),
     re_path('^docs', schema_view),
+    re_path("^api/evaluation_domain/v1/", include((evaluation_domain_urls, 'evaluation_domain'), namespace='v1_evaluation_domain')),
+
 ]
