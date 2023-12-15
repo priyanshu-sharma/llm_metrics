@@ -18,7 +18,6 @@ class Prompt(AutoTimestampedModel, UserTrackingModel):
     class Meta:
         db_table = 'prompt'
         app_label = 'evaluation_domain'
-        unique_together = [('run_id', 'llm_models')]
         indexes = [
             models.Index(fields=['run_id']),
         ]
