@@ -17,11 +17,3 @@ class UploadViewset(ViewSet):
         df = pd.read_csv(csv_file)
         print(df.head())
         return JsonResponse({"Result": "Okay"}, status=HTTP_200_OK)
-
-# class FileUploadView(views.APIView):
-#     parser_classes = (FileUploadParser,)
-
-#     def put(self, request, filename, format=None):
-#         file_obj = request.FILES['file']
-#         # do some stuff with uploaded file
-#         return Response(status=204)
