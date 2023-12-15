@@ -1,0 +1,56 @@
+[{
+    "model": "evaluation_domain.rating",
+    "pk": "a767d9fa-93e7-41f2-8640-cf391653f499",
+    "fields": {
+        "install_ts": "2023-12-14 10:00:00",
+        "update_ts": "2023-12-14 22:40:00",
+        "created_by_id": 1,
+        "updated_by_id": 2,
+        "response_id": "7767d9fa-93e7-41f2-8640-cf391653f499",
+        "rating_type": "MANUAL",
+        "metrics": {},
+        "meta": {}
+    }
+},
+{
+    "model": "evaluation_domain.rating",
+    "pk": "45d84c6b-6388-476f-9ed0-f543121c1d98",
+    "fields": {
+        "install_ts": "2023-12-14 10:00:00",
+        "update_ts": "2023-12-14 22:40:00",
+        "created_by_id": 1,
+        "updated_by_id": 2,
+        "response_id": "65d84c6b-6388-476f-9ed0-f543121c1d98",
+        "rating_type": "MANUAL",
+        "metrics": {},
+        "meta": {}
+    }
+},
+{
+    "model": "evaluation_domain.rating",
+    "pk": "5ae554b8-b6c0-4861-ab78-8d23785fbce7",
+    "fields": {
+        "install_ts": "2023-12-14 10:00:00",
+        "update_ts": "2023-12-14 22:40:00",
+        "created_by_id": 1,
+        "updated_by_id": 2,
+        "response_id": "5be554b8-b6c0-4861-ab78-8d23785fbce7",
+        "rating_type": "LLM_ASSISTED",
+        "metrics": {},
+        "meta": {}
+    }
+},
+{
+    "model": "evaluation_domain.rating",
+    "pk": "9208ebf2-53f4-4ab9-bbb6-f74de69cec46",
+    "fields": {
+        "install_ts": "2023-12-14 10:00:00",
+        "update_ts": "2023-12-14 22:40:00",
+        "created_by_id": 1,
+        "updated_by_id": 2,
+        "response_id": "9708ebf2-53f4-4ab9-bbb6-f74de69cec46",
+        "rating_type": "LLM_ASSISTED",
+        "metrics": {},
+        "meta": {}
+    }
+}]

@@ -1,0 +1,64 @@
+[{
+    "model": "evaluation_domain.prompt",
+    "pk": "ab900031-4256-4de9-a2c6-4ef948db6b4a",
+    "fields": {
+        "install_ts": "2023-12-14 10:00:00",
+        "update_ts": "2023-12-14 22:40:00",
+        "created_by_id": 1,
+        "updated_by_id": 2,
+        "run_id" : "7b900031-4256-4de9-a2c6-4ef948db6b4e",
+        "sentence": "Hello How are you !",
+        "llm_models": "CHAT_GPT",
+        "prompt_status": "CREATED",
+        "meta": {},
+        "active": true
+    }
+},
+{
+    "model": "evaluation_domain.prompt",
+    "pk": "bb900031-4256-4de9-a2c6-4ef948db6b4c",
+    "fields": {
+        "install_ts": "2023-12-14 10:00:00",
+        "update_ts": "2023-12-14 22:40:00",
+        "created_by_id": 1,
+        "updated_by_id": 2,
+        "run_id" : "7b900031-4256-4de9-a2c6-4ef948db6b4e",
+        "sentence": "What is today temperature?",
+        "llm_models": "CHAT_GPT",
+        "prompt_status": "COMPLETED",
+        "meta": {},
+        "active": true
+    }
+},
+{
+    "model": "evaluation_domain.prompt",
+    "pk": "cb900031-4256-4de9-a2c6-4ef948db6b4d",
+    "fields": {
+        "install_ts": "2023-12-14 10:00:00",
+        "update_ts": "2023-12-14 22:40:00",
+        "created_by_id": 1,
+        "updated_by_id": 2,
+        "run_id" : "3b900031-4256-4de9-a2c6-4ef948db6b4f",
+        "sentence": "Can you help me with this?",
+        "llm_models": "CHAT_GPT",
+        "prompt_status": "RETRIGGERED",
+        "meta": {},
+        "active": true
+    }
+},
+{
+    "model": "evaluation_domain.prompt",
+    "pk": "db900031-4256-4de9-a2c6-4ef948db6b4e",
+    "fields": {
+        "install_ts": "2023-12-14 10:00:00",
+        "update_ts": "2023-12-14 22:40:00",
+        "created_by_id": 1,
+        "updated_by_id": 2,
+        "run_id" : "3b900031-4256-4de9-a2c6-4ef948db6b4f",
+        "sentence": "How can I help you?",
+        "llm_models": "CHAT_GPT",
+        "prompt_status": "CREATED",
+        "meta": {},
+        "active": true
+    }
+}]
