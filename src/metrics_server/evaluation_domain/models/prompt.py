@@ -22,3 +22,15 @@ class Prompt(AutoTimestampedModel, UserTrackingModel):
         indexes = [
             models.Index(fields=['run_id']),
         ]
+
+    @staticmethod
+    def get_or_create(run_id, sentence, llm_models, prompt_type):
+        """
+        Get or create a Images.
+        """
+        try:
+            prompt = Prompt.objects.get(sentence=sentence, llm_models=llm_models, prompt_type=prompt_type, active=True)
+        except Prompt.DoesNotExist:
+            prompt = Prompt.objects.create(run_id=run_id, sentence=sentence, llm_models=llm_models, prompt_type=prompt_type, meta={}, active=True)
+            prompt.save()
+        return prompt
