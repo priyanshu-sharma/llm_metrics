@@ -1,0 +1,11 @@
+.Title {
+    height: 20vh;
+    width: 100%;
+    background-color: aqua;
+}
+
+.Title-Heading {
+    text-align: center;
+    font-size: large;
+    font-weight: 500;
+}
