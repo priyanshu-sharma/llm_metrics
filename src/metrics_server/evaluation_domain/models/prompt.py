@@ -39,7 +39,6 @@ class Prompt(AutoTimestampedModel, UserTrackingModel):
 def evaluate_prompt(sender, instance, created, **kwargs):
     from evaluation_domain.tasks import generate_response_task
     if created:
-        print("Run ID - {}".format(instance.sentence))
         generate_response_task.delay(instance.id)
 
 post_save.connect(evaluate_prompt, sender=Prompt)

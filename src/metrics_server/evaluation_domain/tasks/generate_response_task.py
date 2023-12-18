@@ -8,11 +8,10 @@ from services import openai_service
 )
 def generate_response_task(prompt_id):
     prompt = Prompt.objects.get(id=prompt_id)
-    llm_models = prompt.llm_models
     messages = [
         {"role": "user", "content": prompt.sentence}
     ] 
-    response = openai_service.generate_response(llm_models, messages)
+    response = openai_service.generate_response(messages)
     prompt.prompt_status = PromptStatus.COMPLETED
     prompt.save()
     from evaluation_domain.api.public import create_response
