@@ -85,21 +85,6 @@ SWAGGER_SETTINGS = {
    'USE_SESSION_AUTH': False
 }
 
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql", 
-        "NAME": "metrics_api", 
-        "HOST": "localhost", 
-        "PORT": 5432, 
-        "USER": "priyanshu", 
-        "PASSWORD": "anshU11528997!"
-    }
-}
-
-
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
