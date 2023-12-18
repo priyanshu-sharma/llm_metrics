@@ -1,2 +1,2 @@
 from server_config.database_health_check import health_check_view
-from server_config.settings import BASE_DIR
+from server_config.settings import BASE_DIR, OPENAI_KEY

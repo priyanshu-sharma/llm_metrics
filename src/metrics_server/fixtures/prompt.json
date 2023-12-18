@@ -9,6 +9,7 @@
         "run_id" : "7b900031-4256-4de9-a2c6-4ef948db6b4e",
         "sentence": "Hello How are you !",
         "llm_models": "CHAT_GPT",
+        "prompt_type": "QA",
         "prompt_status": "CREATED",
         "meta": {},
         "active": true
@@ -25,6 +26,7 @@
         "run_id" : "7b900031-4256-4de9-a2c6-4ef948db6b4e",
         "sentence": "What is today temperature?",
         "llm_models": "CHAT_GPT",
+        "prompt_type": "QA",
         "prompt_status": "COMPLETED",
         "meta": {},
         "active": true
@@ -41,6 +43,7 @@
         "run_id" : "3b900031-4256-4de9-a2c6-4ef948db6b4f",
         "sentence": "Can you help me with this?",
         "llm_models": "CHAT_GPT",
+        "prompt_type": "QA",
         "prompt_status": "RETRIGGERED",
         "meta": {},
         "active": true
@@ -57,6 +60,7 @@
         "run_id" : "3b900031-4256-4de9-a2c6-4ef948db6b4f",
         "sentence": "How can I help you?",
         "llm_models": "CHAT_GPT",
+        "prompt_type": "QA",
         "prompt_status": "CREATED",
         "meta": {},
         "active": true

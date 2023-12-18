@@ -19,3 +19,14 @@ class Response(AutoTimestampedModel, UserTrackingModel):
         db_table = 'response'
         app_label = 'evaluation_domain'
 
+    @staticmethod
+    def create(prompt_id, result):
+        """
+        Get or create a Response.
+        """
+        try:
+            response = Response.objects.create(prompt_id=prompt_id, result=result, overall_metrics={}, meta={}, active=True)
+            response.save()
+            return response
+        except Exception as e:
+            raise NotImplementedError
