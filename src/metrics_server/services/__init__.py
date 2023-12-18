@@ -1,5 +1,5 @@
-# from services.openai_service import OpenAIService
+from services.openai_service import OpenAIService
 
-# openai_service = OpenAIService()
+openai_service = OpenAIService()
 
-# __all__ = ('openai_service')
+__all__ = ('openai_service')

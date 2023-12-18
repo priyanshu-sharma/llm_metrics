@@ -142,26 +142,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Celery Configuration
-CELERY_BROKER_URL = "amqp://guest:guest@localhost:5672//"
-CELERY_RESULT_BACKEND = 'redis://localhost:6379/1'
-
-CELERY_BEAT_SCHEDULE = {}
-
-# Logging
-
-LOGGING = {
-    "version": 1,
-    "disable_existing_loggers": False,
-    "root": {"level": "INFO", "handlers": ["console"]},
-    "handlers": {"console": {"class": "logging.StreamHandler",},},
-}
-
-DEFAULT_TIMEOUT_SECONDS = 5
-
-REDIS = {
-    'host': 'localhost',
-    'port': 6379,
-    'db': 0,
-    'socket_timeout': 0.5,
-}
+from .local_settings import *
