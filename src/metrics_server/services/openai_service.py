@@ -5,13 +5,9 @@ from evaluation_domain.enums import LlmModels
 class OpenAIService():
     def __init__(self):
         self.openai = OpenAI(api_key=OPENAI_KEY)
-        self.model_map = {
-            LlmModels.CHAT_GPT: 'gpt-3.5-turbo'
-        }
     
-    def generate_response(self, model, messages):
-        openai_model = self.model_map[model]
-        response = self.openai.chat.completions.create(model=openai_model, messages=messages)
+    def generate_response(self, messages):
+        response = self.openai.chat.completions.create(model='gpt-3.5-turbo', messages=messages)
         return response.choices[0].message.content
 
     

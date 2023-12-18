@@ -18,3 +18,15 @@ class Rating(AutoTimestampedModel, UserTrackingModel):
     class Meta:
         db_table = 'rating'
         app_label = 'evaluation_domain'
+
+    @staticmethod
+    def create(response_id, rating_type, metrics):
+        """
+        Get or create a Rating.
+        """
+        try:
+            rating = Rating.objects.create(response_id=response_id, rating_type=rating_type, metrics=metrics, meta={})
+            rating.save()
+            return rating
+        except Exception as e:
+            raise NotImplementedError
