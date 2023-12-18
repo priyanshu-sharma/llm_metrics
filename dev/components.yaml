@@ -1,0 +1,21 @@
+version: '3.1'
+services:
+  metrics_api:
+    image: postgres:14-alpine
+    environment:
+      POSTGRES_USER: "priyanshu"
+      POSTGRES_PASSWORD: "anshU11528997!"
+      POSTGRES_DB: "metrics_api"
+    ports:
+      - "5432:5432"
+
+  redis_api:
+    image: redis:5.0-alpine
+    ports:
+      - "6379:6379"
+
+  rabbitmq_api:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"

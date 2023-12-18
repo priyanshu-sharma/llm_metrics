@@ -11,7 +11,7 @@ def correctness_tracking_task(response_id):
     response = Response.objects.get(id=response_id)
     result = response.result
     messages = [
-        {"role": "user", "content": "Given this sentence - {}, there is a _ % of correctness in the sentence. (Give response only in percentage not in sentence)".format(result)}
+        {"role": "user", "content": "Given this sentence - {}, there is a _ % of correctness in the sentence. (Just only give the percentage not any explaination)".format(result)}
     ] 
     openai_response = openai_service.generate_response(messages)
     if len(openai_response) < 4:

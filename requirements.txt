@@ -7,13 +7,17 @@ django-cors-headers
 djangorestframework
 django-rest-swagger
 django-filter
+eventlet
 ipython
 ipython-genutils
 jedi
 marshmallow
+openai
 pandas
 pre-commit
 psycopg2-binary
 python-json-logger
 redis
 requests
+torch
+transformers
