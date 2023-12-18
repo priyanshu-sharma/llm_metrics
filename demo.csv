@@ -1,5 +1,2 @@
 Context,Question,Type,LlmModel
-Who Recent Elections in US,Who is the most popular candidate?,QA,BARD
-New Recent Elections in US,Who is the most popular candidate?,QA,BART
-Recent Elections in US,Who is the most popular candidate?,QA,CHAT_GPT
-Recent Elections in US,New Who is the most popular candidate?,QA,CHAT_GPT
+According to 2020 Presidential Elections of US, Who was the most popular candidate?,QA,CHAT_GPT

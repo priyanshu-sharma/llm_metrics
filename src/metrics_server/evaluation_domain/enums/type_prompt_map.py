@@ -3,7 +3,7 @@ from evaluation_domain.api.web.schemas import PromptCreationSchema
 
 TYPE_PROMPT_MAP = {
     PromptType.QA : {
-        'prompt_structure': 'With the following {}, can you tell me the answer for the following question - {}',
+        'prompt_structure': 'With the following context - {}, can you answer this question - {}',
         'schema': PromptCreationSchema()
     }
 }
