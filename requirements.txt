@@ -1,7 +1,7 @@
 amqp
 black
 celery
-Django
+django
 django-celery-beat
 django-cors-headers
 djangorestframework
@@ -13,7 +13,7 @@ jedi
 marshmallow
 pandas
 pre-commit
-psycopg2
+psycopg2-binary
 python-json-logger
 redis
 requests

@@ -2,6 +2,7 @@ import uuid
 from django.db import models
 from extensions.models import AutoTimestampedModel, UserTrackingModel
 from evaluation_domain.enums import LlmModels, PromptStatus, PromptType
+from django.db.models.signals import post_save
 
 class Prompt(AutoTimestampedModel, UserTrackingModel):
     """
@@ -34,3 +35,9 @@ class Prompt(AutoTimestampedModel, UserTrackingModel):
             prompt = Prompt.objects.create(run_id=run_id, sentence=sentence, llm_models=llm_models, prompt_type=prompt_type, meta={}, active=True)
             prompt.save()
         return prompt
+    
+def evaluate_prompt(sender, instance, created, **kwargs):
+    if created:
+        print("Run ID - {}".format(instance.sentence))
+
+post_save.connect(evaluate_prompt, sender=Prompt)
