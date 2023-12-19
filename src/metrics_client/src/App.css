@@ -1,9 +1,11 @@
-.background {
-  
+.base {
+  width: 100%;
+  height: 100vh;
   background-color: black;
 }
-/* 
-.App-logo {
+
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -13,7 +15,7 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-} */
+}
 
 
 .Upload {
@@ -30,7 +32,6 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  /* color: white; */
 }
 
 .Table {
@@ -38,7 +39,8 @@
   width: 100%;
   background-color: aquamarine;
 }
-/* .App-link {
+
+.App-link {
   color: #61dafb;
 }
 
