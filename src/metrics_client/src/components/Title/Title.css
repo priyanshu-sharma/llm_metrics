@@ -6,4 +6,7 @@
     font-size: large;
     font-weight: 500;
     color: aliceblue;
+    padding-top: 1%;
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
