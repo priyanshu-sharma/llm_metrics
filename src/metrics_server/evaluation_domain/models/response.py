@@ -24,26 +24,21 @@ class Response(AutoTimestampedModel, UserTrackingModel):
         """
         Get or create a Response.
         """
-        try:
-            response = Response.objects.create(prompt_id=prompt_id, result=result, overall_metrics={}, meta={}, active=True)
-            response.save()
-            return response
-        except Exception as e:
-            raise NotImplementedError
+        # try:
+        response = Response.objects.create(prompt_id=prompt_id, result=result, overall_metrics={}, meta={}, active=True)
+        response.save()
+        return response
+        # except Exception as e:
+        #     raise NotImplementedError
 
 def evaluate_response(sender, instance, created, **kwargs):
-    from evaluation_domain.enums import TYPE_PROMPT_MAP
     from evaluation_domain.tasks import bias_tracking_task, correctness_tracking_task
     if created:
-        prompt_type = instance.prompt.prompt_type
-        print("Run ID - {}".format(prompt_type))
-        possible_metrics = TYPE_PROMPT_MAP[prompt_type]['metrics']
-        if 'bias' in possible_metrics:
+        metrics = instance.prompt.meta['metrics']
+        if 'bias' in metrics:
             bias_tracking_task.delay(instance.id)
-        if 'correctness' in possible_metrics:
+        if 'correctness' in metrics:
             correctness_tracking_task.delay(instance.id)
-        else:
-            raise NotImplementedError
 
 
 post_save.connect(evaluate_response, sender=Response)

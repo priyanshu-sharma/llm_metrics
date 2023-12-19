@@ -1,7 +1,10 @@
 from marshmallow import fields, Schema
+from marshmallow import INCLUDE
+
 
 class PromptCreationSchema(Schema):        
-    Context = fields.String(required=True)
-    Question = fields.String(required=True)
-    Type = fields.String(required=True)
-    LlmModel = fields.String(required=True)
+    prompt = fields.String(required=True)
+    metrics = fields.List(fields.String(), required=True)
+    llm_models = fields.String(required=True)
+    class Meta:
+        unknown = INCLUDE
