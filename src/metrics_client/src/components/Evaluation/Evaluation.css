@@ -122,14 +122,14 @@
 
 .upload-section {
     width: 100%;
-    height: 10vh;
+    height: 14vh;
     text-align: center;
     color: aliceblue;
 }
 
 .upload-button {
     height: 100%;
-    padding-top: 1%;
+    /* padding-top: 1%; */
 }
 
 .button {
