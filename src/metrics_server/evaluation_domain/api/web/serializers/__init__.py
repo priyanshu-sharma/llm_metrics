@@ -1,0 +1,1 @@
+from evaluation_domain.api.web.serializers.rating_serializer import RatingSerializer
