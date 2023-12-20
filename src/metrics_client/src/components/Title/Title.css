@@ -1,0 +1,12 @@
+.title {
+    height: 10vh;
+    width: 100%;
+    text-align: center;
+    font-size: large;
+    font-weight: 500;
+    color: aliceblue;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-size: 110%;
+    padding-top: 1%;
+}
