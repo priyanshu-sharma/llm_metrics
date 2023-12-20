@@ -11,8 +11,8 @@ def upload_file_api(serialied_data):
     csv_file = serialied_data.get('csv_file')
     columns = re.findall(r'\{([^}]+)\}', prompt)
     print(prompt, metrics, csv_file, columns, llm_models)
+    run_id = uuid.uuid4()
     if len(columns) == 0:
-        run_id = uuid.uuid4()
         Prompt.create([Prompt(run_id=run_id, sentence=prompt, llm_models=llm_models, meta={"metrics": metrics}, active=True)])
     elif len(columns) > 0 and csv_file:
         df = pd.read_csv(csv_file)
@@ -25,7 +25,6 @@ def upload_file_api(serialied_data):
                 output_value[column] = row[column]
             sentence = prompt.format(**output_value)
             print(sentence)
-            run_id = uuid.uuid4()
             create_prompt_list.append(Prompt(run_id=run_id, sentence=sentence, llm_models=llm_models, meta={"metrics": metrics}, active=True))
         Prompt.create(create_prompt_list)
     else:
