@@ -15,7 +15,7 @@ def correctness_tracking_task(response_id):
     ] 
     openai_response = openai_service.generate_response(messages)
     if len(openai_response) < 4:
-        correctness_precentage = int(openai_response)
+        correctness_precentage = openai_response
     else:
         correctness_precentage = re.findall('\d*%', openai_response)
     from evaluation_domain.api.public import create_rating
