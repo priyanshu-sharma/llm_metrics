@@ -10,6 +10,17 @@ cd llm_metrics/
 
 bash setup.sh
 ```
+
+### Docker
+
+To start all the components without any prior installation use
+
+```
+make non_container_dev
+```
+
+This will up the postgres db, redis and Rabbitmq server
+
 ### Other Component Setup
 
 #### Postgres
@@ -61,9 +72,9 @@ rabbitmq-server
 Open a new Terminal and install Metrics Server dependencies with: -
 
 ```
+pip install -r requirements.txt
 cd src/metrics_server/
-
-bash entrypoint.sh
+python manage.py migrate
 ```
 
 And start Metrics Server with: -
@@ -79,7 +90,7 @@ Open a new Terminal and start Metrics Server Celery with: -
 ```
 cd src/metrics_server/
 
-celery -A server_config.celery.app worker -c 1 -l info
+celery -A server_config.celery.app worker -c 1 -l info -P eventlet
 ```
 
 ### Metrics UI
@@ -87,9 +98,9 @@ celery -A server_config.celery.app worker -c 1 -l info
 Open a new Terminal and install UI dependencies using: -
 
 ```
-cd metrics_ui/
+cd src/metrics_client/
 
-bash entrypoint.sh
+npm install
 ```
 
 And start the UI Server with: -
@@ -97,3 +108,10 @@ And start the UI Server with: -
 ```
 npm start
 ```
+
+## Don't forget to add local configurations
+
+
+1. .env file for metrics-client (will on the same level as of metrics_client's src)
+
+2. local-settings.py in server_config in metrics server 

@@ -25,6 +25,14 @@
     width: 50%;
 }
 
+.prompt-textarea {
+    width: 50%;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 2%;
+    border-color: grey;
+}
+
 .metrics {
     width: 100%;
     height: 16vh;
@@ -41,6 +49,26 @@
 
 .metrics-selector {
     width: 50%;
+}
+
+.metrics-checkbox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.metrics-bias-checkbox {
+    width: 33.3%;
+}
+
+.metrics-correctness-checkbox {
+    width: 33.3%;
+}
+
+.metrics-all-checkbox {
+    width: 33.3%;
 }
 
 .model {
@@ -61,6 +89,14 @@
     width: 50%;
 }
 
+.model-select {
+    width: 50%;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 2%;
+    border-color: grey;
+}
+
 .dataset {
     width: 100%;
     height: 16vh;
@@ -79,16 +115,21 @@
     width: 50%;
 }
 
+.dataset-file {
+    width: 60%;
+    margin-left: 10%;
+}
+
 .upload-section {
     width: 100%;
-    height: 10vh;
+    height: 14vh;
     text-align: center;
     color: aliceblue;
 }
 
 .upload-button {
     height: 100%;
-    padding-top: 1%;
+    /* padding-top: 1%; */
 }
 
 .button {
