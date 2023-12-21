@@ -23,7 +23,8 @@ const Evaluation = () => {
   };
 
   const handleDataset = (event: any) => {
-    setDataset(event.target.value);
+    // console.log(event);
+    setDataset(event.target.files[0]);
   };
 
   const handleUpload = async () => {

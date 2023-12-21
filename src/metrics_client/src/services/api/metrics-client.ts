@@ -1,6 +1,6 @@
 // import { httpPost} from "../http";
 import axios from "axios";
-const METRICS_API_URL = "http://127.0.0.1:8000/";
+const METRICS_API_URL = "http://127.0.0.1:8000";
 
 export const uploadPrompt = (
   files: string,
